@@ -1,0 +1,7 @@
+<suite name="FlipkartMobileAppTest" verbose="1" thread-count="3" >
+    <test name="loginTest"  >
+        <classes>
+            <class name="weathertest.WeatherTest" />
+        </classes>
+    </test>
+</suite>
