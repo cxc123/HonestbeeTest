@@ -27,9 +27,9 @@ We need to have install these below
 
 1) Once emulator Android virtual device is up and appium server is up please run below command to start test
 
-mvn clean test
+mvn clean test -DdeviceId=emulator-5556
 
-Note:- If you want to run test on other devices Go to this class src/test/java/WeatherTest/BaseTest.java and change udid to your device udid
+Note:- If you want to run test on other devices just pass devicedid us -DdevicedId parameter.It will set uuid in desired capability like below
 
 
  dc.setCapability("udid","emulator-5556");
@@ -64,8 +64,9 @@ Steps
    c) Turn on the Developer Options and click the USB Debugging.
 3) Run command adb devices and make sure you are seeing your connected devices. adb devices will show your devices connected with udid
 
-4) Go to this class src/test/java/WeatherTest/BaseTest.java and change udid to your device udid
-  For ex:-
-    dc.setCapability("udid","emulator-5556");
+4)If you want to run test on other devices just pass devicedid us -DdevicedId parameter.It will set uuid in desired capability like below
+
+
+ dc.setCapability("udid","emulator-5556");
 
 5) Run mvn clean test to run tests.
